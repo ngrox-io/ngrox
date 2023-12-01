@@ -10,13 +10,13 @@ deps:
 	go mod download
 
 server: deps
-	go install -tags '$(BUILDTAGS)' cmd/ngroxd/ngroxd.go
+	go build -tags '$(BUILDTAGS)' -o bin/ngroxd cmd/ngrox/ngrox.go
 
 fmt:
 	go fmt internal/...
 
 client: deps
-	go install -tags '$(BUILDTAGS)' cmd/ngrox/ngrox.go
+	go build -tags '$(BUILDTAGS)' -o bin/ngrox cmd/ngrox/ngrox.go
 
 release-client: BUILDTAGS=release
 release-client: client
