@@ -223,7 +223,6 @@ func (t *Tunnel) listenTcp(listener *net.TCPListener) {
 
 		// accept public connections
 		tcpConn, err := listener.AcceptTCP()
-
 		if err != nil {
 			// not an error, we're shutting down this tunnel
 			if atomic.LoadInt32(&t.closing) == 1 {

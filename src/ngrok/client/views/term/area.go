@@ -3,6 +3,7 @@ package term
 
 import (
 	"fmt"
+
 	termbox "github.com/nsf/termbox-go"
 )
 

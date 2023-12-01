@@ -5,7 +5,6 @@ import (
 	"crypto/tls"
 	"encoding/base64"
 	"fmt"
-	vhost "github.com/inconshreveable/go-vhost"
 	"io"
 	"math/rand"
 	"net"
@@ -13,6 +12,8 @@ import (
 	"net/url"
 	"ngrok/log"
 	"sync"
+
+	vhost "github.com/inconshreveable/go-vhost"
 )
 
 type Conn interface {

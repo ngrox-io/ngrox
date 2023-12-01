@@ -1,12 +1,13 @@
 package term
 
 import (
-	termbox "github.com/nsf/termbox-go"
 	"ngrok/client/mvc"
 	"ngrok/log"
 	"ngrok/proto"
 	"ngrok/util"
 	"unicode/utf8"
+
+	termbox "github.com/nsf/termbox-go"
 )
 
 const (

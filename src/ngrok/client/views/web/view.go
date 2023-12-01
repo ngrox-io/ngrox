@@ -2,14 +2,14 @@
 package web
 
 import (
-	"github.com/gorilla/websocket"
 	"net/http"
 	"ngrok/client/assets"
 	"ngrok/client/mvc"
 	"ngrok/log"
 	"ngrok/proto"
 	"ngrok/util"
-	"path"
+
+	"github.com/gorilla/websocket"
 )
 
 type WebView struct {
@@ -36,7 +36,6 @@ func NewWebView(ctl mvc.Controller, addr string) *WebView {
 	// handle web socket connections
 	http.HandleFunc("/_ws", func(w http.ResponseWriter, r *http.Request) {
 		conn, err := websocket.Upgrade(w, r, nil, 1024, 1024)
-
 		if err != nil {
 			http.Error(w, "Failed websocket upgrade", 400)
 			wv.Warn("Failed websocket upgrade: %v", err)
@@ -56,7 +55,7 @@ func NewWebView(ctl mvc.Controller, addr string) *WebView {
 
 	// serve static assets
 	http.HandleFunc("/static/", func(w http.ResponseWriter, r *http.Request) {
-		buf, err := assets.Asset(path.Join("assets", "client", r.URL.Path[1:]))
+		buf, err := assets.Fs.ReadFile(r.URL.Path[1:])
 		if err != nil {
 			wv.Warn("Error serving static file: %s", err.Error())
 			http.NotFound(w, r)

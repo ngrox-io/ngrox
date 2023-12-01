@@ -92,8 +92,7 @@ type NewTunnel struct {
 // When the server wants to initiate a new tunneled connection, it sends
 // this message over the control channel to the client. When a client receives
 // this message, it must initiate a new proxy connection to the server.
-type ReqProxy struct {
-}
+type ReqProxy struct{}
 
 // After a client receives a ReqProxy message, it opens a new
 // connection to the server and sends a RegProxy message.
@@ -111,10 +110,8 @@ type StartProxy struct {
 // A client or server may send this message periodically over
 // the control channel to request that the remote side acknowledge
 // its connection is still alive. The remote side must respond with a Pong.
-type Ping struct {
-}
+type Ping struct{}
 
 // Sent by a client or server over the control channel to indicate
 // it received a Ping.
-type Pong struct {
-}
+type Pong struct{}

@@ -13,7 +13,7 @@ func LoadTLSConfig(rootCertPaths []string) (*tls.Config, error) {
 	pool := x509.NewCertPool()
 
 	for _, certPath := range rootCertPaths {
-		rootCrt, err := assets.Asset(certPath)
+		rootCrt, err := assets.Fs.ReadFile(certPath)
 		if err != nil {
 			return nil, err
 		}

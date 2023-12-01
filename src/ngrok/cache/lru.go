@@ -172,7 +172,7 @@ func (lru *LRUCache) SaveItems(w io.Writer) error {
 }
 
 func (lru *LRUCache) SaveItemsToFile(path string) error {
-	if wr, err := os.OpenFile(path, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0644); err != nil {
+	if wr, err := os.OpenFile(path, os.O_CREATE|os.O_WRONLY|os.O_TRUNC, 0o644); err != nil {
 		return err
 	} else {
 		defer wr.Close()

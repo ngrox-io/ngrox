@@ -241,7 +241,7 @@ func (whv *WebHttpView) register() {
 			}
 		}()
 
-		pageTmpl, err := assets.Asset("assets/client/page.html")
+		pageTmpl, err := assets.Fs.ReadFile("page.html")
 		if err != nil {
 			panic(err)
 		}

@@ -2,13 +2,14 @@ package client
 
 import (
 	"fmt"
-	"github.com/inconshreveable/mousetrap"
 	"math/rand"
 	"ngrok/log"
 	"ngrok/util"
 	"os"
 	"runtime"
 	"time"
+
+	"github.com/inconshreveable/mousetrap"
 )
 
 func init() {
