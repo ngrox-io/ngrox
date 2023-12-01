@@ -1,20 +1,22 @@
 .PHONY: default server client deps fmt clean all release-all contributors
-export GOPATH:=$(shell pwd)
 
 BUILDTAGS=debug
 default: all
+	
+test:
+	go test -race --coverprofile=coverage.coverprofile --covermode=atomic ./...
 
 deps: 
-	cd src/ngrok && go mod tidy
+	go mod tidy
 
 server: deps
-	cd src/ngrok && go install -tags '$(BUILDTAGS)' ngrok/main/ngrokd
+	go install -tags '$(BUILDTAGS)' ngrok/main/ngrokd
 
 fmt:
-	cd src/ngrok && go fmt ngrok/...
+	go fmt ngrok/...
 
 client: deps
-	cd src/ngrok && go install -tags '$(BUILDTAGS)' ngrok/main/ngrok
+	go install -tags '$(BUILDTAGS)' ngrok/main/ngrok
 
 release-client: BUILDTAGS=release
 release-client: client

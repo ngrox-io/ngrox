@@ -102,18 +102,18 @@ All of the different message types (Auth, AuthResp, ReqTunnel, RegProxy, StartPr
     
 ## ngrokd - the server
 ### Code
-Code for the server lives under src/ngrok/server
+Code for the server lives under src/github.com/ngrox-io/ngrox/internal/server
 
 ### Entry point
-The ngrokd entry point is in _src/ngrok/server/main.go_.
+The ngrokd entry point is in _src/github.com/ngrox-io/ngrox/internal/server/main.go_.
 There is a stub at _src/ngrok/main/ngrokd/ngrokd.go_ for the purposes of creating a properly named binary and being in its own "main" package to comply with go's build system.
 
 ## ngrok - the client
 ### Code
-Code for the client lives under src/ngrok/client
+Code for the client lives under src/github.com/ngrox-io/ngrox/internal/client
 
 ### Entry point
-The ngrok entry point is in _src/ngrok/client/main.go_.
+The ngrok entry point is in _src/github.com/ngrox-io/ngrox/internal/client/main.go_.
 There is a stub at _src/ngrok/main/ngrok/ngrok.go_ for the purposes of creating a properly named binary and being in its own "main" package to comply with go's build system.
 
 ## Static assets
