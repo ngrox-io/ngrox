@@ -9,9 +9,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/ngrox-io/ngrox/internal/log"
-
 	"github.com/ngrox-io/ngrox/internal/conn"
+	"github.com/ngrox-io/ngrox/internal/log"
 
 	gometrics "github.com/rcrowley/go-metrics"
 )

@@ -7,11 +7,8 @@ import (
 	"github.com/ngrox-io/ngrox/internal/client/mvc"
 	"github.com/ngrox-io/ngrox/internal/client/views/term"
 	"github.com/ngrox-io/ngrox/internal/client/views/web"
-
-	"github.com/ngrox-io/ngrox/internal/proto"
-
 	"github.com/ngrox-io/ngrox/internal/log"
-
+	"github.com/ngrox-io/ngrox/internal/proto"
 	"github.com/ngrox-io/ngrox/internal/util"
 )
 

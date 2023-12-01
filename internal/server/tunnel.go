@@ -11,12 +11,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ngrox-io/ngrox/internal/msg"
-
-	"github.com/ngrox-io/ngrox/internal/log"
-
 	"github.com/ngrox-io/ngrox/internal/conn"
-
+	"github.com/ngrox-io/ngrox/internal/log"
+	"github.com/ngrox-io/ngrox/internal/msg"
 	"github.com/ngrox-io/ngrox/internal/util"
 )
 

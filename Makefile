@@ -7,16 +7,16 @@ test:
 	go test -race --coverprofile=coverage.coverprofile --covermode=atomic ./...
 
 deps: 
-	go mod tidy
+	go mod download
 
 server: deps
-	go install -tags '$(BUILDTAGS)' ngrok/main/ngrokd
+	go install -tags '$(BUILDTAGS)' cmd/ngroxd/ngroxd.go
 
 fmt:
-	go fmt ngrok/...
+	go fmt internal/...
 
 client: deps
-	go install -tags '$(BUILDTAGS)' ngrok/main/ngrok
+	go install -tags '$(BUILDTAGS)' cmd/ngrox/ngrox.go
 
 release-client: BUILDTAGS=release
 release-client: client

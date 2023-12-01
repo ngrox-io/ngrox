@@ -4,11 +4,8 @@ import (
 	"unicode/utf8"
 
 	"github.com/ngrox-io/ngrox/internal/client/mvc"
-
-	"github.com/ngrox-io/ngrox/internal/proto"
-
 	"github.com/ngrox-io/ngrox/internal/log"
-
+	"github.com/ngrox-io/ngrox/internal/proto"
 	"github.com/ngrox-io/ngrox/internal/util"
 
 	termbox "github.com/nsf/termbox-go"

@@ -6,9 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ngrox-io/ngrox/internal/log"
-
 	"github.com/ngrox-io/ngrox/internal/conn"
+	"github.com/ngrox-io/ngrox/internal/log"
 
 	vhost "github.com/inconshreveable/go-vhost"
 	//"net"

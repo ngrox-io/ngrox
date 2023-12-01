@@ -14,7 +14,6 @@ import (
 	"time"
 
 	"github.com/ngrox-io/ngrox/internal/conn"
-
 	"github.com/ngrox-io/ngrox/internal/util"
 
 	metrics "github.com/rcrowley/go-metrics"

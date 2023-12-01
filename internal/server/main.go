@@ -7,12 +7,9 @@ import (
 	"runtime/debug"
 	"time"
 
-	"github.com/ngrox-io/ngrox/internal/msg"
-
-	log "github.com/ngrox-io/ngrox/internal/log"
-
 	"github.com/ngrox-io/ngrox/internal/conn"
-
+	log "github.com/ngrox-io/ngrox/internal/log"
+	"github.com/ngrox-io/ngrox/internal/msg"
 	"github.com/ngrox-io/ngrox/internal/util"
 )
 

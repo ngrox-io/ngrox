@@ -7,11 +7,8 @@ import (
 	"time"
 
 	"github.com/ngrox-io/ngrox/internal/client/mvc"
-
-	"github.com/ngrox-io/ngrox/internal/version"
-
 	"github.com/ngrox-io/ngrox/internal/log"
-
+	"github.com/ngrox-io/ngrox/internal/version"
 	"gopkg.in/inconshreveable/go-update.v0"
 	"gopkg.in/inconshreveable/go-update.v0/check"
 )

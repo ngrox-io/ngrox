@@ -12,18 +12,12 @@ import (
 	"time"
 
 	"github.com/ngrox-io/ngrox/internal/client/mvc"
-
-	"github.com/ngrox-io/ngrox/internal/version"
-
-	"github.com/ngrox-io/ngrox/internal/proto"
-
-	"github.com/ngrox-io/ngrox/internal/msg"
-
-	"github.com/ngrox-io/ngrox/internal/log"
-
 	"github.com/ngrox-io/ngrox/internal/conn"
-
+	"github.com/ngrox-io/ngrox/internal/log"
+	"github.com/ngrox-io/ngrox/internal/msg"
+	"github.com/ngrox-io/ngrox/internal/proto"
 	"github.com/ngrox-io/ngrox/internal/util"
+	"github.com/ngrox-io/ngrox/internal/version"
 
 	metrics "github.com/rcrowley/go-metrics"
 )

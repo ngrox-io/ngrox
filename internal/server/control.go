@@ -7,13 +7,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ngrox-io/ngrox/internal/version"
-
-	"github.com/ngrox-io/ngrox/internal/msg"
-
 	"github.com/ngrox-io/ngrox/internal/conn"
-
+	"github.com/ngrox-io/ngrox/internal/msg"
 	"github.com/ngrox-io/ngrox/internal/util"
+	"github.com/ngrox-io/ngrox/internal/version"
 )
 
 const (
