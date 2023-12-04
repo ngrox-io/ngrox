@@ -37,6 +37,17 @@ builds:
       - darwin
     main: ./cmd/ngroxd
 
+kos:
+  - repository: ghcr.io/ngrox-io/ngroxd
+    tags:
+    - '{{.Version}}'
+    - latest
+    bare: true
+    preserve_import_paths: false
+    platforms:
+    - linux/amd64
+    - linux/arm64
+
 
 archives:
   - format: tar.gz

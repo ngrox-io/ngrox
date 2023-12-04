@@ -13,7 +13,7 @@ deps:
 	go mod download
 
 server: deps
-	go build -tags '$(BUILDTAGS)' -o $(SERVER_RELEASE) cmd/ngrox/ngrox.go
+	go build -tags '$(BUILDTAGS)' -o $(SERVER_RELEASE) cmd/ngroxd/ngroxd.go
 
 fmt:
 	go fmt internal/...
